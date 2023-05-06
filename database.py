@@ -1,6 +1,6 @@
 import mysql.connector
 
-def creat():
+def create():
     mydb = mysql.connector.connect(
         host = "localhost", 
         user = "root",
@@ -22,5 +22,5 @@ def table():
     mycursor.execute("CREATE TABLE IF NOT EXISTS student (id INT AUTO_INCREMENT PRIMARY KEY , StudentNumber VARCHAR(45) NOT NULL, Name VARCHAR(45), SurName VARCHAR(45), Birthdate DATETIME, Gender VARCHAR(45), Class VARCHAR(45))")
     connection.close()
 
-creat()
+create()
 table()
